@@ -1,6 +1,7 @@
 # Pong Like Game from Agate Game Course
 
 - [Made by Angga Puja Restu Prakasa](https://github.com/kierskies)
+- Unity 2020.3.30f1
 
 ## Additional Change
 - Use External Font
