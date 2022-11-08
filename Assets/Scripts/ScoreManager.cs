@@ -9,7 +9,6 @@ public class ScoreManager : MonoBehaviour
     public int leftScore;
     public int rightScore;
     public int maxScore;
-    public PaddleController playerPaddle;
     public TMP_Text gameOver;
     public BallController ball;
 

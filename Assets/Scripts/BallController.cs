@@ -21,8 +21,18 @@ public class BallController : MonoBehaviour
         transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
     }
 
+    public void ActivatePSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
+
+    public void DeActivatePSpeedUp()
+    {
+        rig.velocity = speed ;
+    }
+    
     public void StopBall()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
