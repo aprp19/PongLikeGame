@@ -5,6 +5,7 @@
 ## Additional Change
 - Use External Font
 - Winner Result
+- Play With Bot
 
 ## Reference Used
 - [Pixeloid Font](https://www.fontspace.com/pixeloid-font-f69232)
