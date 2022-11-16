@@ -10,10 +10,10 @@
 - Goal Information
 
 ## Agate Game Course Task
-- [x] Basic Gameplay
-- [x] UI & Game Manager
-- [x] Power Up
-- [x] Problem Solving - Features Addition
+- [:white_check_mark:] Basic Gameplay
+- [:white_check_mark:] UI & Game Manager
+- [:white_check_mark:] Power Up
+- [:white_check_mark:] Problem Solving - Features Addition
 
 ## Reference Used
 - [Pixeloid Font](https://www.fontspace.com/pixeloid-font-f69232)
