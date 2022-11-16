@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class BallController : MonoBehaviour
 {
@@ -10,6 +7,9 @@ public class BallController : MonoBehaviour
     private Rigidbody2D rig;
     public Vector2 speed;
     public Vector2 resetPosition;
+
+    public bool ballIsRight;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +17,26 @@ public class BallController : MonoBehaviour
         rig.velocity = speed;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Left Paddle")
+        {
+            ballIsRight = false;
+        }
+        else if (collision.gameObject.name == "Right Paddle")
+        {
+            ballIsRight = true;
+        }
+    }
+
     public void ResetBall()
     {
+        transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
+    }
+
+    public void UnpausedBall()
+    {
+        rig.velocity = speed;
         transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
     }
 

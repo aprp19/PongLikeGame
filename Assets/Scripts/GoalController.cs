@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -32,7 +31,7 @@ public class GoalController : MonoBehaviour
         }
     }
 
-    private IEnumerator GoalInfo(string goalSide)
+    IEnumerator GoalInfo(string goalSide)
     {
         if (manager.leftScore >= manager.maxScore || manager.rightScore >= manager.maxScore)
         {

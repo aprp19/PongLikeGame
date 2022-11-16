@@ -6,6 +6,8 @@ public class BotPaddleController : MonoBehaviour
     public float speed;
     public float lerpSpeed;
     private Rigidbody2D rig;
+
+    private Vector3 objectScale;
  
     void Start()
     {
@@ -27,5 +29,30 @@ public class BotPaddleController : MonoBehaviour
         {
             rig.velocity = Vector2.Lerp(rig.velocity, Vector2.zero * speed, lerpSpeed * Time.deltaTime);
         }
+    }
+    public void ActivateLongPaddle(int doubleSize)
+    {
+        objectScale = transform.localScale;
+        transform.localScale = new Vector3(objectScale.x, objectScale.y + doubleSize, objectScale.z);
+        Invoke("DeactivateLongPaddle", 5);
+    }
+
+    public void DeactivateLongPaddle()
+    {
+        objectScale = transform.localScale;
+        transform.localScale = new Vector3(objectScale.x, objectScale.y - 2, objectScale.z);
+    }
+
+    public void ActivateSpeedPaddle(int speedUp)
+    {
+        speed += speedUp;
+        Debug.Log("Speed Up: " + rig.velocity);
+        Invoke("DeactivateSpeedPaddle", 5);
+    }
+
+    public void DeactivateSpeedPaddle()
+    {
+        speed -= 4;
+        Debug.Log("Speed Reset: " + rig.velocity);
     }
 }
