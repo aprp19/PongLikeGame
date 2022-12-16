@@ -13,7 +13,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void PlayWithBot()
     {
-        SceneManager.LoadScene("GameSceneBot");
+        SceneManager.LoadScene("GameSceneBot", LoadSceneMode.Single);
         Debug.Log("Created by Angga Puja Restu Prakasa");
     }
 
